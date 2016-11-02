@@ -1,1 +1,6 @@
-pets index
+<h3>Petoy</h3>
+
+
+<% @pets.each do |pet| %>
+  <%= link_to pet.name, pet_toys_path(pet) %><br>
+<% end %>
