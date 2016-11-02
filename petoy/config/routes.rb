@@ -7,4 +7,6 @@ Rails.application.routes.draw do
     resources :toys
   end
 
+  get '/pets/all', to: "pets#index"
+
 end
