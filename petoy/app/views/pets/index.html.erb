@@ -11,3 +11,6 @@
 <% @pets.each do |pet| %>
   <%= link_to pet.name, pet_path(pet) %><br>
 <% end %>
+
+<br><br>
+<%= link_to 'json blob for first pet (/pets/1/toys)', '/pets/1/toys' %>
