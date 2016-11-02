@@ -7,7 +7,10 @@ $(document).on('turbolinks:load', function(){
 
   var petLinkListener = function() {
     $('.pet-link').on('ajax:success', function(event, response){
-      console.log(response);
+      // console.log(response.length)
+      for (var i=0;i<response.length;i++){
+        console.log(response[i].description)
+      }
   });
 
 }
