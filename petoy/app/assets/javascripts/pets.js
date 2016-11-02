@@ -5,12 +5,33 @@ $(document).on('turbolinks:load', function(){
   petLinkListener();
 })
 
-  var petLinkListener = function() {
+// list all pet toys
+
+  // var petLinkListener = function() {
+  //   $('.pet-link').on('ajax:success', function(event, response){
+  //     // console.log(response.length)
+
+  //     for (var i=0;i<response.length;i++){
+  //       console.log(response[i].description)
+  //     }
+  // });
+
+// list only the shortest description
+var petLinkListener = function() {
     $('.pet-link').on('ajax:success', function(event, response){
-      // console.log(response.length)
-      for (var i=0;i<response.length;i++){
-        console.log(response[i].description)
+
+      var shortest_description = response[0].description
+
+      // console.log('short: ' + shortest_description)
+      for (var i=0;i<response.length-1;i++){
+
+        if (response[i].description.length > response[i+1].description.length) {
+          shortest_description = response[i+1].description
+        }
       }
+      console.log(shortest_description)
   });
 
 }
+
+
