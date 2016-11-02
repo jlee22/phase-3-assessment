@@ -5,8 +5,11 @@ class PetsController < ApplicationController
   end
 
   def show
-    @pet = Pet.find(params[:id])
-    @toys = @pet.toys
+      @pet = Pet.find(params[:id])
+      @toys = @pet.toys
+    if request.xhr?
+      render json: @toys
+    end
   end
 
 end
