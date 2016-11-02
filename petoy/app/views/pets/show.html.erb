@@ -15,3 +15,6 @@ Age: <%= @pet.age %><br>
 <% @toys.each do |toy| %>
   <%= link_to toy.description, pet_toy_path(@pet, toy) %><br>
 <% end %>
+
+
+<%= link_to "Add a toy", new_pet_toy_path(@pet) %>

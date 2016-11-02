@@ -1,5 +1,10 @@
 <h3>Petoy</h3>
-
+<br>
 <% @pets.each do |pet| %>
-  <%= link_to pet.name, pet_path(pet), class: 'pet-link', remote:true %><br>
+  <%= link_to 'AJAXIFIED: ' + pet.name, pet_path(pet), class: 'pet-link', remote:true %><br>
+<% end %>
+
+<br><br>
+<% @pets.each do |pet| %>
+  <%= link_to pet.name, pet_path(pet) %><br>
 <% end %>
