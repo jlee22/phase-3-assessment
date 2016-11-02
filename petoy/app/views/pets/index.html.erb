@@ -1,10 +1,13 @@
-<h3>Petoy</h3>
+<h3 class="well" id="title">Petoy</h3>
 <br>
+
+<p>AJAXIFIED - Console logs the pet's toy with the shortest description:</p>
 <% @pets.each do |pet| %>
-  <%= link_to 'AJAXIFIED: ' + pet.name, pet_path(pet), class: 'pet-link', remote:true %><br>
+  <%= link_to pet.name, pet_path(pet), class: 'pet-link', remote:true %><br>
 <% end %>
 
 <br><br>
+<p>Normal links that goes to the pet show:</p>
 <% @pets.each do |pet| %>
   <%= link_to pet.name, pet_path(pet) %><br>
 <% end %>
