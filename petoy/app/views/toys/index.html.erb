@@ -1,17 +1,3 @@
-<h2><%= @pet.name %>'s Page
-</h2>
 
-<h3>Pet Info:</h3>
-Name: <%= @pet.name %><br>
-Breed: <%= @pet.breed %><br>
-Age: <%= @pet.age %><br>
-<% if @pet.cute == true %>
-  This pet is cute
-<% else %>
-  This pet ugly yo
-<% end %>
 
-<h3> <%= @pet.name %>'s Toys:</h3>
-<% @toys.each do |toy| %>
-  <%= link_to toy.description, pet_toy_path(@pet, toy) %><br>
-<% end %>
+<%= @toys %>

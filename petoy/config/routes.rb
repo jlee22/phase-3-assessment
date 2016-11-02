@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root 'pets#index'
 
-  resources :pets, only: :index do
+  resources :pets, only: [:index, :show] do
     resources :toys
   end
 
